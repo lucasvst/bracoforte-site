@@ -9,7 +9,7 @@ const SiteOverlay = () => (
         <div className="text-xs uppercase">
           Empreiteira Braço Forte
         </div>
-        <div className="text-xs uppercase ">
+        <div className="text-xs uppercase">
           +55 47 99713-5472 | Joinville/SC
         </div>
       </div>
