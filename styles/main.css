@@ -1,0 +1,57 @@
+@tailwind base;
+
+@layer base {
+
+    * { box-sizing: border-box; }
+
+    html, body {
+        @apply block relative h-full m-0 p-0 overflow-hidden;
+
+        -ms-touch-action: none;
+        -webkit-touch-callout: none;
+        -ms-content-zooming: none;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-overflow-scrolling: touch;
+        overflow-scrolling: touch;
+
+        -webkit-text-size-adjust: none;
+        -moz-text-size-adjust: none;
+        -ms-text-size-adjust: none;
+        -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    }
+
+    #__next {
+        @apply flex flex-col w-full h-full;
+    }
+}
+
+:root {
+    --video-width: 100vw;
+    --video-height: 100vh;
+}
+
+.background-video {
+
+    @media (min-aspect-ratio: 16/9) {
+        --video-height: 56.25vw;
+    }
+
+    @media (max-aspect-ratio: 16/9) {
+        --video-width: 177.78vh;
+    }
+
+    position: relative;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+}
+
+.background-video iframe {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: var(--video-width);
+    height: var(--video-height);
+    transform: translate(-50%, -50%);
+}
