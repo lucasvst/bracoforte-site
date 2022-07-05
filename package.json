@@ -10,7 +10,7 @@
     "export": "next export",
     "lint": "next lint",
     "predeploy": "next build && next export",
-    "deploy": "gh-pages -d out"
+    "deploy": "gh-pages -d out -t true"
   },
   "dependencies": {
     "@heroicons/react": "^1.0.6",
